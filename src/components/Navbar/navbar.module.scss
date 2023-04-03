@@ -4,7 +4,7 @@
     color: blue;
     justify-content: space-around;
     align-items: center;
-    // padding: 8px;
+    box-shadow: 1px 1px 5px 5px #727272;
 
 
 }
@@ -12,3 +12,21 @@
 .logo{
     width: 40px;
 }
+
+.colorNav {
+    padding: 1rem;
+    text-decoration: none;
+    transition: 0.2s ease-out;
+  
+&:hover{
+    background: rgba(222, 187, 69, 0.4);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.1px);
+    -webkit-backdrop-filter: blur(10.1px);
+
+}
+
+}
+
+  

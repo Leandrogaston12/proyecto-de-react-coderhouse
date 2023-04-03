@@ -8,7 +8,7 @@ const ProductList = () => {
         console.log(categoryName);
         const getProductos = async () => {
             
-                if(categoryName != "all"){
+                if(!!categoryName){
                     const response = await fetch(`https://fakestoreapi.com/products`)
                     const data = await response.json();
                     setProductos(data.filter((producto)=>(producto.category === categoryName)));
@@ -27,17 +27,15 @@ const ProductList = () => {
 
     
   return (
-    <div>
+    <div className={styles.grid}>
       {productos.map((producto) => (
          <Link to={`/products/${producto.id}`}>
          <div className={styles.container}>
-           <h3 className={styles.ajusteContenido}>{producto.title}</h3>
            <img className={styles.imagenes} src={producto.image} />
-           <p>{producto.description}</p>
+           <h3 className={styles.ajusteContenido}>{producto.title}</h3>
            <p> $ {producto.price}</p>
          </div>
        </Link>
-        
       ))}
     </div>
   );

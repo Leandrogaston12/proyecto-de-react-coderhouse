@@ -3,7 +3,6 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
 import CardDetail from "./components/CardDetail";
 import Home from "./components/Home";
-import ItemLastContainer from "./components/ItemLastContainer";
 import Navbar from "./components/Navbar";
 import ProductList from "./components/ProductList";
 
@@ -32,7 +31,6 @@ function App() {
         <Route path="/products/:id" element={<CardDetail />} />
         <Route path="/404" element={<h2>404 Not Found</h2>} />
       </Routes>
-      <ItemLastContainer greeting="Esta es mi pagina la cual se va a basar en un e-comerce de ventiladores" />
     </div>
   );
 }

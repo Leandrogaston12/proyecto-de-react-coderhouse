@@ -1,8 +1,9 @@
 import React from 'react'
+import ProductList from '../ProductList'
 
 const Home = () => {
   return (
-    <div>Bienvenidos al inicio de mi sitio</div>
+    <ProductList />
   )
 }
 

@@ -1,16 +1,30 @@
 .container{
-    border: 2px solid orange;
+    border-top: solid 5px red;
+    border-bottom: solid 10px cyan;
+    border-left: solid 7px yellow;
+    border-right: solid 7px green;
     border-radius: 4px;
-    padding: 1px;
+    padding: 0.5rem;
     margin: 1rem;
+    height: 350px;
+    overflow: hidden;
+
 }
 
 .imagenes{
     height: 200px;
     width: 200px;
+    display: block;
+    margin: 0 auto;
 }
 
 .ajusteContenido{
     display: flex;
     justify-content: center;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+
 }

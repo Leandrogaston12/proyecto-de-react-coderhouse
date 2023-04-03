@@ -1,3 +1,11 @@
-body{
-    background-image: url(https://arteluz.es/392-large_default/ventilador-de-techo-lantau.jpghttps://p4.wallpaperbetter.com/wallpaper/632/216/946/architecture-fans-wallpaper-preview.jpg) ;
+
+body {
+  padding: 0;
+  margin: 0;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvFrLA70PvOOWiHXqTiTsWv0V0-F2vjb-lOg&usqp=CAU);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Montserrat", sans-serif;
 }
