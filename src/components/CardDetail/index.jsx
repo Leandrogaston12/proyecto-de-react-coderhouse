@@ -1,20 +1,22 @@
 import { useEffect, useState } from "react";
 import { Navigate, useParams } from "react-router-dom";
+import styles from "./cardDetail.module.scss";
+import db from "../../../db/firebase-config.js";
+import { doc, getDoc } from "firebase/firestore";
 
 const CardDetail = () => {
   const [producto, setProducto] = useState({});
   const [loading, setloading] = useState(true)
   const { id } = useParams();
+
+  const itemRef = doc(db, "items" , id)
+
     
   const getProducto = async () => {
-    try {
-        const response = await fetch(`https://fakestoreapi.com/products/${id}`)
-        const data = await response.json();
-        setProducto(data);
-        setloading(false);
-    } catch (error) {
-       setProducto(null)
-    }
+   const itemDoc = await getDoc (itemRef)
+   const item = itemDoc.data()
+   setProducto(item) 
+   setloading(false)
   }
 
   useEffect(() => {
@@ -30,9 +32,10 @@ const CardDetail = () => {
     return <h2>loading...</h2>
   }
 
+  
 
   return (
-    <div>
+    <div className={styles.containerDetail}>
       <h3>{producto.title}</h3>
       <img src={producto.image} alt={producto.title} width="200" height="200" />
       <p>{producto.description}</p>

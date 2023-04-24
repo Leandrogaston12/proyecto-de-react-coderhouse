@@ -27,39 +27,33 @@ const Navbar = ({ icono }) => {
 
       <NavLink
         className={styles.colorNav}
-        to="/category/men's clothing"
+        to="/category/ventilador de pie"
         style={({ isActive }) => (isActive ? activeStyle : undefined)}
       >
-        Men cloting
+        Ventilador de pie
       </NavLink>
 
       <NavLink
         className={styles.colorNav}
-        to="/category/jewelery"
+        to="/category/ventilador pared"
         style={({ isActive }) => (isActive ? activeStyle : undefined)}
       >
-        Jewelery
+        ventilador de pared
       </NavLink>
 
       <NavLink
         className={styles.colorNav}
-        to="/category/electronics"
+        to="/category/ventilador techo"
         style={({ isActive }) => (isActive ? activeStyle : undefined)}
       >
-        Electronics
+        Ventilador techo
       </NavLink>
 
       <NavLink
-        className={styles.colorNav}
-        to="/category/women's clothing"
-        style={({ isActive }) => (isActive ? activeStyle : undefined)}
-      >
-        Women's clothing
-      </NavLink>
-
-      <p>
-        <img src={icono} alt="" width="30" height="30" />0
-      </p>
+      className={styles.colorNav}
+      style={({ isActive }) => (isActive ? activeStyle : undefined)}
+      ><img src={icono} alt="" width="30" height="30" /></NavLink>
+        
     </nav>
   );
 };
