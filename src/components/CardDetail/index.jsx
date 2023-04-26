@@ -9,7 +9,7 @@ import { doc, getDoc } from "firebase/firestore";
 
 
 const CardDetail = () => {
-  const {addProduct, cart} = useContext(CartContext)
+  const {addProduct} = useContext(CartContext)
   const [producto, setProducto] = useState({});
   const [loading, setloading] = useState(true)
   const { id } = useParams();
@@ -49,7 +49,7 @@ const CardDetail = () => {
     <p>{producto.description}</p>
     <p> $ {producto.price}</p>
     <p>{producto.category}</p>
-    <button onClick={()=> addProduct(producto, 1)}>Agregar al carrito</button>
+    <button className={styles.button} onClick={()=> addProduct(producto, 1)}>Agregar al carrito</button>
   </div>
 </div>
   );

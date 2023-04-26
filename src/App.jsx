@@ -6,6 +6,7 @@ import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import ProductList from "./components/ProductList";
 import CartProvider from "./Context/CartContext";
+import ItemCart from "./components/Cart";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/category/:categoryName" element={<ProductList />} />
           <Route path="/products/:id" element={<CardDetail />} />
           <Route path="/404" element={<h2>404 Not Found</h2>} />
+          <Route path="/cart" element={<ItemCart/>}/>
         </Routes>
       </CartProvider>
     </div>

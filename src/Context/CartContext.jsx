@@ -8,7 +8,7 @@ const CartProvider = ({ children }) => {
   const addProduct = (item, newQuantity) =>{
     setCart(isInCart(item.id) ? [...cart] : [...cart, {...item,quantity:newQuantity}]);
   }
-  console.log('carrito: ', cart)
+  // console.log('carrito: ', cart)
 
   const clearCart = () => setCart([]);
 
