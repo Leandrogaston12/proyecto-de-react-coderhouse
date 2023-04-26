@@ -5,6 +5,8 @@ import { Navigate, useParams } from "react-router-dom";
 import styles from "./cardDetail.module.scss";
 import db from "../../../db/firebase-config.js";
 import { doc, getDoc } from "firebase/firestore";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -38,20 +40,23 @@ const CardDetail = () => {
   }
 
   
-
-  return (
-    <div className={styles.containerDetail}>
-  <div className={styles.imageContainer}>
-    <img src={producto.image} alt={producto.title} width="200" height="200" />
+return (
+  <div className={styles.containerDetail}>
+    <div className={styles.imageContainer}>
+      <img src={producto.image} alt={producto.title} width="200" height="200" />
+    </div>
+      <div className={styles.detailsContainer}>
+        <h3>{producto.title}</h3>
+        <p>{producto.description}</p>
+        <p> $ {producto.price}</p>
+        <p>{producto.category}</p>
+        <button className={styles.button} onClick={() => {
+        addProduct(producto, 1);
+        toast.success("Producto agregado al carrito");
+        }}>Agregar al carrito</button>
+          <ToastContainer />
+      </div>
   </div>
-  <div className={styles.detailsContainer}>
-    <h3>{producto.title}</h3>
-    <p>{producto.description}</p>
-    <p> $ {producto.price}</p>
-    <p>{producto.category}</p>
-    <button className={styles.button} onClick={()=> addProduct(producto, 1)}>Agregar al carrito</button>
-  </div>
-</div>
   );
 };
 

@@ -29,16 +29,19 @@ const ProductList = () => {
   }, [categoryName]);
 
   return (
-    <div className={styles.grid}>
-      {productos.map((producto) => (
-        <Link key={producto.id} to={`/products/${producto.id}`}>
-          <div className={styles.container}>
-            <img className={styles.imagenes} src={producto.image} />
-            <h3 className={styles.ajusteContenido}>{producto.title}</h3>
-            <p> $ {producto.price}</p>
-          </div>
-        </Link>
-      ))}
+    <div>
+      <h1 className={styles.titulo}>Venta de ventiladores</h1>
+      <div className={styles.grid}>
+        {productos.map((producto) => (
+          <Link key={producto.id} to={`/products/${producto.id}`}>
+            <div className={styles.container}>
+              <img className={styles.imagenes} src={producto.image} />
+              <h3 className={styles.ajusteContenido}>{producto.title}</h3>
+              <p> $ {producto.price}</p>
+            </div>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };

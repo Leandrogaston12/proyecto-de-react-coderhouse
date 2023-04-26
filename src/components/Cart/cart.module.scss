@@ -26,7 +26,7 @@
 }
 
 .detailsContainer {
-  width: 50%; /* Establecemos el ancho del contenedor de detalles al 50% */
+  width: 50%; 
   padding: 16px;
 }
 
@@ -69,9 +69,52 @@
 }
 
 
+.botonCarrito {
+  margin-top: auto;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: #2596be;
+  border: none;
+  cursor: pointer;
+}
 
 
+.botonCarrito:hover {
+  background-color: #207ca3;
+}
 
+.botonCarrito {
+  background-color: red;
+}
+
+.buttonsContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.totalContainer {
+  flex-direction: row; 
+  flex-wrap: wrap;
+  text-align: right;
+  justify-content: space-between;
+  margin: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+  
+}
+
+.total {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+}
 
 
 

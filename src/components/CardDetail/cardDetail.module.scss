@@ -16,6 +16,9 @@
   
   .detailsContainer {
     width: 70%;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 16px;
   }
 
   button {
@@ -28,6 +31,7 @@
     font-weight: bold;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
+    cursor: pointer;
   }
   
   button:hover {

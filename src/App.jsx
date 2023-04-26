@@ -11,8 +11,6 @@ import ItemCart from "./components/Cart";
 function App() {
   return (
     <div>
-      
-      <h1>Venta de ventiladores</h1>
 
       <CartProvider>
         <Navbar icono="https://cdn-icons-png.flaticon.com/512/107/107831.png" />

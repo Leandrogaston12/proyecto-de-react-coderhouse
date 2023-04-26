@@ -3,6 +3,7 @@ import styles from "./navbar.module.scss";
 import logo from "/public/logo.png";
 
 const Navbar = ({ icono }) => {
+
   const activeStyle = {
     color: "red",
   };
@@ -53,7 +54,7 @@ const Navbar = ({ icono }) => {
       className={styles.colorNav}
       to="/cart"
       style={({ isActive }) => (isActive ? activeStyle : undefined)}
-      ><img src={icono} alt="" width="30" height="30" /></NavLink>
+      ><img src={icono} alt="icono carrito" width="30" height="30" /></NavLink>
         
     </nav>
   );

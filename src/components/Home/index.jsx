@@ -4,7 +4,7 @@ import { CartContext } from '../../Context/CartContext'
 
 const Home = () => {
   const prueba = useContext(CartContext)
-  console.log(prueba)
+  // console.log(prueba)
   return (
     <ProductList />
   )
