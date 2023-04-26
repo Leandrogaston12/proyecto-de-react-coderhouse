@@ -51,6 +51,7 @@ const Navbar = ({ icono }) => {
 
       <NavLink
       className={styles.colorNav}
+      to="/cart"
       style={({ isActive }) => (isActive ? activeStyle : undefined)}
       ><img src={icono} alt="" width="30" height="30" /></NavLink>
         

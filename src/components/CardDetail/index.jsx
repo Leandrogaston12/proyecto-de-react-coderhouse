@@ -1,10 +1,15 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+// aca estoy importando el useCart context 
+import { CartContext } from "../../Context/CartContext";
 import { Navigate, useParams } from "react-router-dom";
 import styles from "./cardDetail.module.scss";
 import db from "../../../db/firebase-config.js";
 import { doc, getDoc } from "firebase/firestore";
 
+
+
 const CardDetail = () => {
+  const {addProduct, cart} = useContext(CartContext)
   const [producto, setProducto] = useState({});
   const [loading, setloading] = useState(true)
   const { id } = useParams();
@@ -29,19 +34,24 @@ const CardDetail = () => {
   }
   
   if(loading) {
-    return <h2>loading...</h2>
+    return  <div className={styles.loader}></div>
   }
 
   
 
   return (
     <div className={styles.containerDetail}>
-      <h3>{producto.title}</h3>
-      <img src={producto.image} alt={producto.title} width="200" height="200" />
-      <p>{producto.description}</p>
-      <p> $ {producto.price}</p>
-      <p>{producto.category}</p>
-    </div>
+  <div className={styles.imageContainer}>
+    <img src={producto.image} alt={producto.title} width="200" height="200" />
+  </div>
+  <div className={styles.detailsContainer}>
+    <h3>{producto.title}</h3>
+    <p>{producto.description}</p>
+    <p> $ {producto.price}</p>
+    <p>{producto.category}</p>
+    <button onClick={()=> addProduct(producto, 1)}>Agregar al carrito</button>
+  </div>
+</div>
   );
 };
 
