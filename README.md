@@ -1,5 +1,5 @@
 Venta de ventiladores 
-Este proyecto es un sitio web para una tienda en línea de venta de comida vegetariana. Está creado en el marco de la entrega final del curso de React de Coderhouse
+Este proyecto es un sitio web para una tienda en línea de venta de ventiladores. Está creado en el marco de la entrega final del curso de React de Coderhouse
 
 Cómo usar el proyecto:
 Para usar el proyecto, primero debes clonar el repositorio en tu máquina local ejecutando el siguiente comando git clone . También necesitarás instalar las dependencias del proyecto. Puedes hacerlo usando npm install. Una vez que tengas todo configurado, puedes iniciar el servidor de desarrollo usando "npm start".
