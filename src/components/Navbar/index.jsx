@@ -1,8 +1,9 @@
 import { NavLink } from "react-router-dom";
 import styles from "./navbar.module.scss";
 import logo from "/public/logo.png";
+import CartWidget from "../CartWidget";
 
-const Navbar = ({ icono }) => {
+const Navbar = ({ }) => {
 
   const activeStyle = {
     color: "red",
@@ -50,12 +51,7 @@ const Navbar = ({ icono }) => {
         Ventilador techo
       </NavLink>
 
-      <NavLink
-      className={styles.colorNav}
-      to="/cart"
-      style={({ isActive }) => (isActive ? activeStyle : undefined)}
-      ><img src={icono} alt="icono carrito" width="30" height="30" /></NavLink>
-        
+        <CartWidget/>
     </nav>
   );
 };

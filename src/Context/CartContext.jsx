@@ -16,6 +16,12 @@ const CartProvider = ({ children }) => {
     );
   };
 
+  const getQuantity = () => {
+    let cant = 0;
+    cart.forEach((e) => (cant += e.quantity));
+    return cant;
+  };
+
 
   const clearCart = () => setCart([]);
 
@@ -35,7 +41,9 @@ const CartProvider = ({ children }) => {
     removeProduct,
     addProduct,
     totalCompra,
+    getQuantity,
     cart
+  
     
   }}>
     
