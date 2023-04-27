@@ -18,6 +18,6 @@ Dentro del proyecto, se encuentran las siguientes carpetas importantes:
 - Components: esta carpeta contiene los archivos de los componentes reutilizables de la aplicación.
 - Context: contiene los archivos que manejan el estado global de la aplicación.
 
-##Autor:
+## Autor:
 
 Mi nombre es Leandro Luna y este proyecto fue realizado como entrega final del curso de React de Coderhouse.
