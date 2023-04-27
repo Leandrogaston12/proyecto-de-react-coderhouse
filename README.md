@@ -5,7 +5,7 @@ Este proyecto es un sitio web para una tienda en línea de venta de ventiladores
 
 ## Cómo usar el proyecto:
 
-Para usar el proyecto, primero debes clonar el repositorio en tu máquina local ejecutando el siguiente comando git clone . También necesitarás instalar las dependencias del proyecto. Puedes hacerlo usando npm install. Una vez que tengas todo configurado, puedes iniciar el servidor de desarrollo usando "npm start".
+Para usar el proyecto, primero debes clonar el repositorio en tu máquina local ejecutando el siguiente comando git clone https://github.com/Leandrogaston12/proyecto-de-react-coderhouse.git . También necesitarás instalar las dependencias del proyecto. Puedes hacerlo usando npm install. Una vez que tengas todo configurado, puedes iniciar el servidor de desarrollo usando "npm run dev".
 
 ## Libreria adicional utilizada:
 
