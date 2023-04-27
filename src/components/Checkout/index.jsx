@@ -36,7 +36,7 @@ const CheckoutForm = () => {
         title: '¡La compra ha finalizado!',
         text: `La compra con ID ${idCompra} ha finalizado.`
       })
-    //  alert(`La compra con ID ${idCompra} ha finalizado.`);
+
     } catch (error) {
       console.error("Error al guardar la compra:", error);
       alert("Hubo un error al guardar la compra. Intente de nuevo más tarde.");
@@ -61,9 +61,6 @@ const CheckoutForm = () => {
 
       <label htmlFor="email">Email:</label>
       <input type="email" id="email" name="email" value={formValues.email} onChange={handleChange} required />
-
-      <label htmlFor="repeatEmail">Repetir Email:</label>
-      <input type="email" id="repeatEmail" name="repeatEmail" value={formValues.repeatEmail} onChange={handleChange} required />
 
       <label htmlFor="Telefono">Teléfono:</label>
       <input type="tel" id="Telefono" name="Telefono" value={formValues.Telefono} onChange={handleChange} required />
