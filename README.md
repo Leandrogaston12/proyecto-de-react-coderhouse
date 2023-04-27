@@ -1,4 +1,4 @@
-### Venta de ventiladores
+# Venta de ventiladores
 
 
 Este proyecto es un sitio web para una tienda en línea de venta de ventiladores. Está creado en el marco de la entrega final del curso de React de Coderhouse
